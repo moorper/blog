@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', '\App\Http\Controllers\Portal\IndexController@index');
+Route::get('/', '\App\Http\Controllers\Portal\PostController@index');
+Route::get('archives', '\App\Http\Controllers\Portal\PostController@archives')->name('archives');
+Route::get('p/{post}', '\App\Http\Controllers\Portal\PostController@show')->name('post.show');

@@ -8,14 +8,11 @@ class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('pid')->default(0);
             $table->string('name');
             $table->timestamps();
 
@@ -27,8 +24,6 @@ class CreateCategoriesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
