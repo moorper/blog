@@ -5,8 +5,10 @@
 @section('content')
     <ul>
         @foreach ($posts as $post)
-            @component('components.post.link',['post'=>$post])
-            @endcomponent
+            <li>
+                @component('components.post.link',['post'=>$post])
+                @endcomponent
+            </li>
         @endforeach
     </ul>
 @endsection

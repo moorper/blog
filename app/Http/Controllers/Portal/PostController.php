@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Portal;
 
+use App\Events\PostIndexEvent;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -25,6 +26,8 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
+        // 自增点击数
+        event(new PostIndexEvent($post));
         $parsedown = new Parsedown();
         $post->content = $parsedown->text($post->content);
 

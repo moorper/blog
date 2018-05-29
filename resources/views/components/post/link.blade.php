@@ -1,1 +1,1 @@
-<li><a href="{{ route('post.show',['post'=>$post->id]) }}" target="_blank" title="{{ $post->title }}">{{ $post->created_at }} {{ $post->title }}</a></li>
+<a href="{{ route('post.show',['post'=>$post->id]) }}" target="_self" title="{{ $post->title }}">{{ $post->title }}</a>

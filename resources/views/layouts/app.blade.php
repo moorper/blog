@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" href="https://laravel-china.org/favicon.ico">
     <title>Blog - @yield('title')</title>
     <!--bootstrap-->
@@ -11,7 +12,15 @@
 </head>
 <body>
     <div class="container">
-        @yield('content')
+        <div class="row">
+            <div class="col-sm-2">
+                @include('layouts.sidebar')
+                @yield('sidebar')
+            </div>
+            <div class="col-sm-10">
+                @yield('content')
+            </div>
+        </div>
     </div>
     <!--bootstrap-->
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
@@ -21,6 +30,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <!--highlight.js-->
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        var pathname = window.location.pathname
+        $('ul.nav > li > a[href="'+pathname+'"]').addClass('active')
+    </script>
 </body>
 </html>

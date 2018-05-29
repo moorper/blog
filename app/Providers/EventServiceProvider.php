@@ -16,17 +16,16 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Event' => [
             'App\Listeners\EventListener',
         ],
+        'App\Events\PostIndexEvent' => [
+            'App\Listeners\PostIndexListener',
+        ],
     ];
 
     /**
      * Register any events for your application.
-     *
-     * @return void
      */
     public function boot()
     {
         parent::boot();
-
-        //
     }
 }
