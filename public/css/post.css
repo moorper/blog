@@ -1,0 +1,35 @@
+body{
+    text-align: justify;
+    position: relative;
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: #555;
+    background: #f5f7f9;
+}
+.brand {
+    padding: 0;
+    background: none;
+}
+.brand {
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+    color: #fff;
+    background: #222;
+    border-bottom: none;
+}
+.post-title{
+    color: #4e555b;
+    font-size: 26px;
+    text-align: center;
+    word-break: break-word;
+    font-weight: 400;
+}
+.post-meta{
+    margin: 3px 0 60px 0;
+    color: #999;
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    text-align: center;
+}

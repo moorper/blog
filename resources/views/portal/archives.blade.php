@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('portal.layouts.app')
 
 @section('title', trans('app.archives'))
 
@@ -6,7 +6,7 @@
     <ul>
         @foreach ($posts as $post)
             <li>
-                @component('components.post.link',['post'=>$post])
+                @component('portal.components.post.link',['post'=>$post])
                 @endcomponent
             </li>
         @endforeach
